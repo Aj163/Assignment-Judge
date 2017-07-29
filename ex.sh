@@ -1,2 +1,2 @@
-erlc assignment1.erl
-erlc solution.erl
+erl -make
+erl -noshell -s project main -s init stop
