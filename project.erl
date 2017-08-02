@@ -3,23 +3,24 @@
 % ########################################### Praveen Gupta ###########################################
 
 -module(project).
--export([main/0, check/3]).
+-export([main/1]).
 
 % ############################################################################################################### main
 
-main() -> 
+main(Input_List) -> 
 	
-	{ok, List_of_files} = file:list_dir("./"),
+	%cover:compile_directory(),
 
-	{ok, Binary_List} = file:read_file("input.txt"),
-	IL = binary_to_list(Binary_List),
-	Input_List = string:left(IL, string:len(IL) - 1),
+	{ok, List_of_files} = file:list_dir("./"),
 
 	{Time, Output} = timer:tc(solution, main, [Input_List]),
 	io:fwrite("~nCorrect Output : ~p~nExecution Time : ~p ms~n", [Output, Time/1000]),
 
-	io:fwrite("~n~s ~-20s~-20s~s ~-20s~s~n", ['FILE', 'NAME', 'STATUS', 'EXECUTION', 'TIME(ms)', 'OUTPUT']),
-	run(List_of_files, Input_List, Output).
+	{X, Y} = cover:compile("example.erl"),
+	{X, Y}.
+
+	%io:fwrite("~n~s ~-20s~-20s~s ~-20s~s~n", ['FILE', 'NAME', 'STATUS', 'EXECUTION', 'TIME(ms)', 'OUTPUT']),
+	%run(List_of_files, Input_List, Output).
 
 % ############################################################################################################### run
 
