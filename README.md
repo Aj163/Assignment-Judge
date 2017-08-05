@@ -48,11 +48,7 @@ qsort([]) -> [];
 qsort([Pivot|T]) -> qsort([X || X <- T, X < Pivot]) ++ [Pivot] ++ qsort([X || X <- T, X >= Pivot]).
 ```
 On the Erlang Shell:
-```shell
-c(project).
-project:main([5,3,2,4,1]).
-```
-Ouput : <br>
+<br>
 
 <img src="/Output.png">
 
