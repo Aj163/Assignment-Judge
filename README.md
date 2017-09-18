@@ -6,11 +6,11 @@
 ## <center>PROJECT NAME : Assignment Judge </center>
 
 
-### ABOUT THE PROJECT : Assignment Judge 
+### ABOUT THE PROJECT : Assignment Judge
 
 ><li> Assignment Judge is used to run the assignments submitted by students against the solution program, for a given input.
 ><li>It tells whether the ouput produced by an assignment file is correct/wrong, and also compares the execution time.
-><li>The results are formatted into a table in alphabetical order of assignment file name. 
+><li>The results are formatted into a table in alphabetical order of assignment file name.
 ><li>We therefore recommend that the assignments submitted are named as per the first name of the student in lower case.
 
 
@@ -19,7 +19,7 @@
 > <li>Write a "solution.erl" which gives the correct answer.
 > <li>Move all the assignment files and solution.erl (including project.erl) into a common folder.
 > <li>Compile project.erl in erlang
-> <li>Command : 
+> <li>Command :
 ```c(project).```
 <br>
 > Call project:main(Input).
@@ -55,6 +55,6 @@ On the Erlang Shell:
 
 SCOPE FOR IMPROVEMENT
 
-> This program assumes that all assignments and solution.erl and error free, and either give correct answer or wrong answer!<br>
-> The next update will take care of this and compilation errors will be shown.<br>
+> This program throws compilation and runtime errors in an unordered fashion<br>
+> The next update will take care of this and errors will be shown (optionally) in a formatted manner.<br>
 > Results will be sorted as per execution time.<br>
